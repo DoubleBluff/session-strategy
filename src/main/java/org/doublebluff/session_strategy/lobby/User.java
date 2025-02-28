@@ -1,18 +1,30 @@
 package org.doublebluff.session_strategy.lobby;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
+import java.util.Objects;
 import java.util.UUID;
 
-@Data
+@Getter
+@RequiredArgsConstructor
 public class User {
 
-    private UUID id;
+    private final UUID id;
 
-    private String username;
+    private final String username;
 
-    public User(UUID id, String username) {
-        this.id = id;
-        this.username = username;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o instanceof User user) {
+            return Objects.equals(id, user.id);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
