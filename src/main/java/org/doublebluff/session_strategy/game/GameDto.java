@@ -1,7 +1,7 @@
 package org.doublebluff.session_strategy.game;
 
 import lombok.Data;
-import org.doublebluff.session_strategy.game.api.player.Player;
+import org.doublebluff.session_strategy.game.player.Player;
 
 import java.util.List;
 import java.util.UUID;

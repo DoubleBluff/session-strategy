@@ -2,9 +2,8 @@ package org.doublebluff.session_strategy.game;
 
 import lombok.RequiredArgsConstructor;
 import org.doublebluff.session_strategy.error.NotFoundApiException;
-import org.doublebluff.session_strategy.game.api.GameStorage;
-import org.doublebluff.session_strategy.game.api.action.dto.ActionDto;
-import org.doublebluff.session_strategy.game.api.event.EventDto;
+import org.doublebluff.session_strategy.game.action.dto.ActionDto;
+import org.doublebluff.session_strategy.game.event.EventDto;
 import org.doublebluff.session_strategy.lobby.User;
 import org.springframework.stereotype.Service;
 

@@ -5,7 +5,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class MapFactory {
 
-    public MapInnerApi get() {
-        return null;
+    public MapInnerApi getDefault() {
+        return new MapInnerApiImpl(
+                new SpotType[][] {
+                        { SpotType.SEA },
+                        {}
+                }
+        );
     }
 }
